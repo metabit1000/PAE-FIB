@@ -41,8 +41,8 @@ public class EventListInfo {
     public void setEvents() {
         this.events = new String[] {"Jueves de música en directo",
                 "Sábado, clásico Barça vs Madrid",
-                "Sasha",
-                "Diana",};
+                "Domingo, Semifinal UCL Barcelona vs Real Madrid ",
+                "Martes de música jazz en directo",};
     }
 
     public int totalNames() {
