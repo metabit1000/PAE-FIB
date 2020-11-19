@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<tabs>
+    <tab
+        id="@+id/tab_perfil"
+        icon="@drawable/profile_icon"
+        title="Profile"
+        activeColor="@color/colorBarGo"/>
+    <tab
+        id="@+id/tab_entrenamientos"
+        icon="@drawable/profile_icon"
+        title="Trainings"
+        activeColor="@color/colorBarGo"/>
+    <tab
+        id="@+id/tab_dietas"
+        icon="@drawable/profile_icon"
+        title="Diets"
+        activeColor="@color/colorBarGo"/>
+    <tab
+        id="@+id/tab_eventos"
+        icon="@drawable/profile_icon"
+        title="Events"
+        activeColor="@color/colorBarGo"/>
+</tabs>
