@@ -2,11 +2,13 @@ package com.example.bargo;
 
 public class EventListInfo {
     public int[] images;
-    public String[] names;
+    public String[] bares;
+    public String[] events;
 
     public EventListInfo() {
         setImages();
-        setNames();
+        setBars();
+        setEvents();
     }
 
     public int[] getImages() {
@@ -17,33 +19,33 @@ public class EventListInfo {
         this.images = new int[]{R.drawable.image1,
                 R.drawable.image2,
                 R.drawable.image3,
-                R.drawable.image4,
-                R.drawable.image5,
-                R.drawable.image6,
-                R.drawable.image7,
-                R.drawable.image8,
-                R.drawable.image9};
+                R.drawable.image4,};
+    }
+
+    public String[] getBars() {
+        return bares;
+    }
+
+    public void setBars() {
+        this.bares = new String[] {"Bar Casa Pepe",
+                "Bar Sirena Verde",
+                "Bar Diagonal",
+                "Bar Luna"};
     }
 
 
-    public String[] getNames() {
-        return names;
+    public String[] getEvents() {
+        return events;
     }
 
-    public void setNames() {
-        this.names = new String[] {"John",
-                "Peter",
+    public void setEvents() {
+        this.events = new String[] {"Jueves de música en directo",
+                "Sábado, clásico Barça vs Madrid",
                 "Sasha",
-                "Diana",
-                "Rose",
-                "Mike",
-                "Hussain",
-                "Alex",
-                "Nazia",
-                "Roshale"};
+                "Diana",};
     }
 
     public int totalNames() {
-        return names.length;
+        return events.length;
     }
 }

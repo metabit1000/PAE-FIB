@@ -18,10 +18,11 @@ public class ListEventsFragment extends Fragment {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_list_events, container, false);
     }*/
-    private ListView mChatListView;
+    private ListView eventsListView;
     private EventListInfo eventListInfo = new EventListInfo();
-    private int[] chatsListImage;
-    private String[] chatsListName;
+    private int[] eventsListImage;
+    private String[] eventsListName;
+    private String[] barListName;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -33,12 +34,13 @@ public class ListEventsFragment extends Fragment {
                 textView.setText(s);
             }
         });*/
-        mChatListView = root.findViewById(R.id.eventsList);
-        chatsListImage = eventListInfo.getImages();
-        chatsListName = eventListInfo.getNames();
+        eventsListView = root.findViewById(R.id.eventsList);
+        eventsListImage = eventListInfo.getImages();
+        eventsListName = eventListInfo.getEvents();
+        barListName = eventListInfo.getBars();
         //creat an adapter class
         ChatsListAdapter chatsListAdapter = new ChatsListAdapter();
-        mChatListView.setAdapter(chatsListAdapter);
+        eventsListView.setAdapter(chatsListAdapter);
         return root;
     }
 
@@ -46,7 +48,7 @@ public class ListEventsFragment extends Fragment {
 
         @Override
         public int getCount() {
-            return chatsListImage.length;
+            return eventsListImage.length;
         }
 
         @Override
@@ -62,10 +64,13 @@ public class ListEventsFragment extends Fragment {
         @Override
         public View getView(int position, View covertView, ViewGroup parent) {
             View view = getLayoutInflater().inflate(R.layout.layout_eventslistitem, null);
-            ImageView mImageView = view.findViewById(R.id.contactImage);
-            TextView mTextView = view.findViewById(R.id.contactName);
-            mImageView.setImageResource(chatsListImage[position]);
-            mTextView.setText(chatsListName[position]);
+            ImageView mImageView = view.findViewById(R.id.eventImage);
+            TextView mTextView = view.findViewById(R.id.eventName);
+            TextView mBarView = view.findViewById(R.id.barName);
+
+            mImageView.setImageResource(eventsListImage[position]);
+            mTextView.setText(eventsListName[position]);
+            mBarView.setText(barListName[position]);
             return view;
         }
     }
