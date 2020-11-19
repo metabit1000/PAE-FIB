@@ -4,16 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="ListEventsFragment" >
+    tools:context="ListEventsFragment"
+    android:paddingBottom="60dp">
 
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="73dp"
-        android:layout_height="23dp"
-        android:text="List_event"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/eventsList"
+        android:layout_weight="1"
+        android:paddingTop="10dp"
+        android:dividerHeight="7dp"
+        android:backgroundTint="#BFFFFFFF"
+        android:backgroundTintMode="src_over"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
