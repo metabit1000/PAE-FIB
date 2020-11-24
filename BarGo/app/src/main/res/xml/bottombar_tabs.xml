@@ -2,23 +2,23 @@
 
 <tabs>
     <tab
-        id="@+id/tab_perfil"
+        id="@+id/tab_profile"
         icon="@drawable/profile_icon"
         title="Profile"
         activeColor="@color/colorBarGo"/>
     <tab
-        id="@+id/tab_entrenamientos"
-        icon="@drawable/profile_icon"
+        id="@+id/tab_code"
+        icon="@drawable/code_icon"
         title="Trainings"
         activeColor="@color/colorBarGo"/>
     <tab
-        id="@+id/tab_dietas"
-        icon="@drawable/profile_icon"
+        id="@+id/tab_bars"
+        icon="@drawable/bar"
         title="Diets"
         activeColor="@color/colorBarGo"/>
     <tab
-        id="@+id/tab_eventos"
-        icon="@drawable/profile_icon"
+        id="@+id/tab_events"
+        icon="@drawable/events_icon"
         title="Events"
         activeColor="@color/colorBarGo"/>
 </tabs>
