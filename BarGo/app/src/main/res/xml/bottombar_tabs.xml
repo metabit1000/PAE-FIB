@@ -9,12 +9,12 @@
     <tab
         id="@+id/tab_code"
         icon="@drawable/code_icon"
-        title="Trainings"
+        title="Code"
         activeColor="@color/colorBarGo"/>
     <tab
         id="@+id/tab_bars"
         icon="@drawable/bar"
-        title="Diets"
+        title="Bars"
         activeColor="@color/colorBarGo"/>
     <tab
         id="@+id/tab_events"
