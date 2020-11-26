@@ -7,7 +7,6 @@
     tools:context=".MainActivity"
     android:orientation="vertical">
 
-
     <FrameLayout
         android:id="@+id/fragment_layout"
         android:layout_width="match_parent"
@@ -16,7 +15,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/bottomBar"/>
+        app:layout_constraintBottom_toTopOf="@+id/bottomBar">
+
+    </FrameLayout>
 
     <com.roughike.bottombar.BottomBar
         android:id="@+id/bottomBar"
@@ -27,6 +28,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:background="@color/colorPrimaryDark" />
+        android:background="@color/colorPrimaryDark" >
+
+    </com.roughike.bottombar.BottomBar>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
