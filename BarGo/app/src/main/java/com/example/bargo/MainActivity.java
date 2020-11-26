@@ -12,11 +12,10 @@ import com.roughike.bottombar.BottomBar;
 import com.roughike.bottombar.OnTabSelectListener;
 
 public class MainActivity extends AppCompatActivity {
-
-    Fragment perfil = new profileFragment();
+    Fragment profile = new profileFragment();
     Fragment code = new CodeFragment();
     Fragment bars = new ListBarFragment();
-    Fragment eventos = new ListEventsFragment();
+    Fragment events = new ListEventsFragment();
     private long backPressedTime;
 
     @Override
@@ -27,24 +26,25 @@ public class MainActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_home);
         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-        ft.replace(R.id.fragment_layout, perfil);
+        ft.replace(R.id.fragment_layout, bars);
         ft.commit();
         BottomBar bottomBar = findViewById(R.id.bottomBar);
+        bottomBar.setDefaultTab(R.id.tab_code);
         bottomBar.setOnTabSelectListener(new OnTabSelectListener() {
             @Override
             public void onTabSelected(@IdRes int tabId) {
                 FragmentTransaction ft2 = getSupportFragmentManager().beginTransaction();
-                if(tabId == R.id.tab_perfil) {
-                    ft2.replace(R.id.fragment_layout, perfil);
-                }
-                else if(tabId == R.id.tab_entrenamientos) {
+                if(tabId == R.id.tab_code) {
                     ft2.replace(R.id.fragment_layout, code);
                 }
-                else if(tabId == R.id.tab_dietas) {
+                else if(tabId == R.id.tab_profile) {
+                    ft2.replace(R.id.fragment_layout, profile);
+                }
+                else if(tabId == R.id.tab_bars) {
                     ft2.replace(R.id.fragment_layout, bars);
                 }
-                else if(tabId == R.id.tab_eventos) {
-                    ft2.replace(R.id.fragment_layout, eventos);
+                else if(tabId == R.id.tab_events) {
+                    ft2.replace(R.id.fragment_layout, events);
                 }
                 ft2.commit();
             }
