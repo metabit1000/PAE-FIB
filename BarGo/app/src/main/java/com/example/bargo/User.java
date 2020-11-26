@@ -6,6 +6,8 @@ public class User {
     private String email = "cerveza@gmail.com";
     private int points = 3500;
 
+    private int codesIntroduced[];
+
     private static User instance = null;
     private User(){
     }
