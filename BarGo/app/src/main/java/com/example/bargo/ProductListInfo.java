@@ -2,16 +2,27 @@ package com.example.bargo;
 
 public class ProductListInfo {
 
-    public int[] images;
-    public String[] productos;
-    public String[] unidades;
-    public String[] points;
+    private int[] images;
+    private String[] productos;
+    private String[] unidades;
+    private int[] points;
+    private int[] loQueQueda;
+    private int userPoints;
+    private static ProductListInfo instance = null;
 
     public ProductListInfo() {
         setImages();
         setProductos();
         setUnidades();
         setPoints();
+        setLoQueQueda();
+        userPoints = User.getInstance().getPoints();
+    }
+
+    public static ProductListInfo getInstance(){
+        if(instance == null)
+            instance = new ProductListInfo();
+        return instance;
     }
 
     public int[] getImages() {
@@ -48,15 +59,38 @@ public class ProductListInfo {
                 " /500 ud.",};
     }
 
-    public String[] getPoints() {
+    public int[] getPoints() {
         return points;
     }
 
     public void setPoints() {
-        this.points = new String[] {"5500 puntos",
-                "6000 puntos.",
-                "6500 puntos",
-                "7000 puntos",};
+        this.points = new int[] {3000,
+                6000,
+                6500,
+                7000,};
+    }
+
+    public int[] getLoQueQueda() {
+        return loQueQueda;
+    }
+
+    public void setLoQueQueda() {
+        this.loQueQueda = new int[] {566,
+                400,
+                342,
+                489,};
+    }
+
+    public boolean checkValue(int position) {
+        if(userPoints < points[position])
+            return false;
+        else
+            return true;
+    }
+    public void changeValue(int position) {
+            this.userPoints -= points[position];
+            User.getInstance().setPoints(userPoints);
+            this.loQueQueda[position] -= 1;
     }
 
     public int totalNames() {
