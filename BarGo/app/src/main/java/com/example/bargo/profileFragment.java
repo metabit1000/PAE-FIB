@@ -15,20 +15,19 @@ import androidx.fragment.app.Fragment;
 public class profileFragment extends Fragment {
 
     private TextView points;
+    View view;
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_profile, container, false);
+        view = inflater.inflate(R.layout.fragment_profile, container, false);
 
         Button mis_reservas = (Button) view.findViewById(R.id.misReservas_button);
 
         TextView userName = (TextView) view.findViewById(R.id.user_name_profile);
         userName.setText(User.getInstance().getName());
 
-        TextView points = (TextView) view.findViewById(R.id.points);
-        String p = String.valueOf(User.getInstance().getPoints());
-        points.setText(p + " " + getString(R.string.points));
+        refreshPoints();
 
         mis_reservas.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -48,6 +47,17 @@ public class profileFragment extends Fragment {
         });
 
         return view;
+    }
+
+    private void refreshPoints(){
+        TextView points = (TextView) view.findViewById(R.id.points);
+        String p = String.valueOf(User.getInstance().getPoints());
+        points.setText(p + " " + getString(R.string.points));
+    }
+
+    public void onResume() {
+        refreshPoints();
+        super.onResume();
     }
     
 }
