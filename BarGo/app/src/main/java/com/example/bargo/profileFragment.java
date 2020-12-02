@@ -34,6 +34,15 @@ public class profileFragment extends Fragment {
             }
         });
 
+        Button list_events = (Button) view.findViewById(R.id.exchangeBttn);
+        list_events.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent list_products_activity = new Intent(getActivity(), ListProductActivity.class);
+                startActivity(list_products_activity);
+            }
+        });
+
         return view;
     }
 }
