@@ -12,7 +12,6 @@ import com.roughike.bottombar.BottomBar;
 import com.roughike.bottombar.OnTabSelectListener;
 
 public class MainActivity extends AppCompatActivity {
-
     Fragment profile = new profileFragment();
     Fragment code = new CodeFragment();
     Fragment bars = new ListBarFragment();
@@ -27,9 +26,10 @@ public class MainActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_home);
         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-        ft.replace(R.id.fragment_layout, code);
+        ft.replace(R.id.fragment_layout, bars);
         ft.commit();
         BottomBar bottomBar = findViewById(R.id.bottomBar);
+        bottomBar.setDefaultTab(R.id.tab_code);
         bottomBar.setOnTabSelectListener(new OnTabSelectListener() {
             @Override
             public void onTabSelected(@IdRes int tabId) {
