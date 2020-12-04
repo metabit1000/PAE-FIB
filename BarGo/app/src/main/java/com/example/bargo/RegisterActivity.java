@@ -13,6 +13,7 @@ import android.text.style.ClickableSpan;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -20,6 +21,9 @@ public class RegisterActivity extends AppCompatActivity {
     private TextView login;
     private CheckBox cons;
     private CheckBox prop;
+    private EditText email;
+    private EditText passw;
+    private EditText name;
     private Button signupButton;
 
     @Override
@@ -49,13 +53,27 @@ public class RegisterActivity extends AppCompatActivity {
 
         cons = findViewById(R.id.checkBox);
         prop = findViewById(R.id.checkBox2);
+        email = findViewById(R.id.editTextEmail);
+        passw = findViewById(R.id.editTextContra);
+        name = findViewById(R.id.editTextNombre);
 
         signupButton = findViewById(R.id.buttonAcceder);
         signupButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openMainActivity();
-                //Toast.makeText(getApplicationContext(), "Introduzca unas credenciales válidas", Toast.LENGTH_LONG).show();
+                User usuari = User.getInstance();
+                String correu = email.getText().toString();
+                String contra = passw.getText().toString();
+                String nom = name.getText().toString();
+                if(correu.equals("") || contra.equals("") || nom.equals("")) {
+                    Toast.makeText(getApplicationContext(), "Introduzca unas credenciales válidas", Toast.LENGTH_LONG).show();
+                }
+                else {
+                    usuari.setEmail(correu);
+                    usuari.setName(contra);
+                    usuari.setPassword(nom);
+                    openMainActivity();
+                }
             }
         });
     }
