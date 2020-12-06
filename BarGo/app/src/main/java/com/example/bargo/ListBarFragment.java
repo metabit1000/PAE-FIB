@@ -1,10 +1,12 @@
 package com.example.bargo;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -55,17 +57,29 @@ public class ListBarFragment extends Fragment {
         }
 
         @Override
-        public View getView(int position, View convertView, ViewGroup parent) {
+        public View getView(final int position, View convertView, ViewGroup parent) {
             View view = getLayoutInflater().inflate(R.layout.bar_item_list, null);
             ImageView barImage = view.findViewById(R.id.barImage);
             TextView barName = view.findViewById(R.id.barNameText);
             TextView barAdress = view.findViewById(R.id.adressText);
             CheckBox barVisited = view.findViewById(R.id.visitedCheckBox);
+            Button infoButton = view.findViewById(R.id.infoButton);
 
             barImage.setImageResource(barsListImages[position]);
             barName.setText(barsListNames[position]);
             barAdress.setText(barsListAdresses[position]);
             barVisited.setChecked(barsListVisited[position]);
+
+            infoButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (position == 0) { //solo bar Casa Pepe
+                        Intent intent = new Intent(getActivity(), InfoBarActivity.class);
+                        startActivity(intent);
+                    }
+
+                }
+            });
 
             return view;
         }

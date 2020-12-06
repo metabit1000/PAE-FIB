@@ -39,12 +39,12 @@ public class ListEventsFragment extends Fragment {
         eventsListName = eventListInfo.getEvents();
         barListName = eventListInfo.getBars();
         //creat an adapter class
-        ChatsListAdapter chatsListAdapter = new ChatsListAdapter();
-        eventsListView.setAdapter(chatsListAdapter);
+        EventsListAdapter eventsListAdapter = new EventsListAdapter();
+        eventsListView.setAdapter(eventsListAdapter);
         return root;
     }
 
-    public class ChatsListAdapter extends BaseAdapter {
+    public class EventsListAdapter extends BaseAdapter {
 
         @Override
         public int getCount() {

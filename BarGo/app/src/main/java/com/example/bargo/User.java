@@ -6,6 +6,8 @@ public class User {
     private String email = "cerveza@gmail.com";
     private int points = 3500;
 
+    private int codesIntroduced[];
+
     private static User instance = null;
     private User(){
     }
@@ -34,6 +36,7 @@ public class User {
     public void setPoints(int points){
         this.points = points;
     }
+    public void addPoints(int points) { this.points += points;}
 
     public static User getInstance(){
         if(instance == null)
