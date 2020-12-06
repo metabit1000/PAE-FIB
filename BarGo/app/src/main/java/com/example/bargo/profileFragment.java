@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 public class profileFragment extends Fragment {
@@ -43,6 +44,14 @@ public class profileFragment extends Fragment {
             public void onClick(View view) {
                 Intent list_products_activity = new Intent(getActivity(), ListProductActivity.class);
                 startActivity(list_products_activity);
+            }
+        });
+
+        Button retos = (Button) view.findViewById(R.id.makeChallengeBttn);
+        retos.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View view){
+                Intent retos_activity = new Intent(getActivity(), RetosActivity.class);
+                startActivity(retos_activity);
             }
         });
 
