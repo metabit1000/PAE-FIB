@@ -8,4 +8,7 @@
     <string name="make_challenges">Haz Retos</string>
     <string name="exchange">Intercámbialos</string>
     <string name="info">INFO</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="obtener">OBTENER</string>
+    <string name="noObtener">No tienes suficiente puntos</string>
 </resources>
