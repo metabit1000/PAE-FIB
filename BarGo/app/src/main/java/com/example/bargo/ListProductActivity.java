@@ -93,6 +93,7 @@ public class ListProductActivity extends AppCompatActivity {
                             @Override
                             public void onClick(View v) {
                                 ProductListInfo.getInstance().changeValue(position);
+                                dialog.cancel();
                                 RetosInfo.getInstance().changeChallenges("PROD");
                                 Intent mi_product_activity = new Intent(ListProductActivity.this, ListProductActivity.class);
                                 startActivity(mi_product_activity);
