@@ -88,7 +88,7 @@ public class RetosInfo {
                     progress.set(i, val);
                     if (val == totalProgress.get(i)) {
                         challengeCompleted.set(i, true);
-                        User.getInstance().increasePoints(points.get(i));
+                        User.getInstance().addPoints(points.get(i));
                     }
                 }
             }
