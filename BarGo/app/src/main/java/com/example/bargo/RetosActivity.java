@@ -9,6 +9,7 @@ import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -26,8 +27,8 @@ public class RetosActivity extends AppCompatActivity {
     private ArrayList<Integer> pointsList;
 
     @Override
-    public void onCreate(@Nullable Bundle savedInstanceState, @Nullable PersistableBundle persistentState) {
-        super.onCreate(savedInstanceState, persistentState);
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_retos);
         retosListView = findViewById(R.id.challengeList);
 
@@ -58,11 +59,23 @@ public class RetosActivity extends AppCompatActivity {
 
             TextView challengeName = view.findViewById(R.id.challengeNameTxt);
             TextView challengePoints = view.findViewById(R.id.challengePointsTxt);
+            TextView progressTxt = view.findViewById(R.id.progressTxt);
+            ProgressBar progressBar = (ProgressBar) view.findViewById(R.id.progressBar);
 
             challengeName.setText(challengeNameList.get(position));
             if(challengeCompletedList.get(position)){
-                //challengePoints.setText(getString(R.string.yaObtenido));
+                challengePoints.setText(getString(R.string.yaObtenido));
+                progressTxt.setText("");
             }
+            else{
+                String p = String.valueOf(pointsList.get(position));
+                challengePoints.setText(p + " " + getString(R.string.points));
+                String p1 = String.valueOf(progressList.get(position));
+                String p2 = String.valueOf(totalProgressList.get(position));
+                progressTxt.setText(p1 + "/" + p2);
+            }
+            progressBar.setMax(totalProgressList.get(position));
+            progressBar.setProgress(progressList.get(position));
 
             return view;
         }

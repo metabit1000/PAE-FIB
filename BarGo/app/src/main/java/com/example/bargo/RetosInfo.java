@@ -77,4 +77,21 @@ public class RetosInfo {
         this.challengeType.add("BEER");
         this.challengeType.add("PROD");
     }
+
+    public void changeChallenges(String type){
+        for(int i = 0; i < challengeType.size(); i++){
+            System.out.println(challengeType.get(i));
+            if((challengeType.get(i)).equals(type)){
+                if(!challengeCompleted.get(i)) {
+                    int val = progress.get(i);
+                    val++;
+                    progress.set(i, val);
+                    if (val == totalProgress.get(i)) {
+                        challengeCompleted.set(i, true);
+                        User.getInstance().increasePoints(points.get(i));
+                    }
+                }
+            }
+        }
+    }
 }
