@@ -37,6 +37,8 @@ public class MisReservasActivity extends AppCompatActivity {
         AdaptadorMisReservasList adaptador =  new AdaptadorMisReservasList();
         reservasListView.setAdapter(adaptador);
 
+
+
     }
 
     class AdaptadorMisReservasList extends BaseAdapter {

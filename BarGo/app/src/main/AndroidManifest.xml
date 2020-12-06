@@ -12,6 +12,7 @@
         android:theme="@style/AppTheme.NoActionBar">
         <activity android:name=".ListProductActivity"></activity>
         <activity android:name=".MisReservasActivity" />
+        <activity android:name=".InfoBarActivity" />
         <activity android:name=".RegisterActivity" />
         <activity android:name=".LoginActivity">
             <intent-filter>
