@@ -20,6 +20,7 @@
             android:screenOrientation="portrait"/>
         <activity android:name=".LoginActivity"
             android:screenOrientation="portrait">
+        <activity android:name=".InfoBarActivity" />
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

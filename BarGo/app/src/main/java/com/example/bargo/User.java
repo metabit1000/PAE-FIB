@@ -36,7 +36,7 @@ public class User {
     public void setPoints(int points){
         this.points = points;
     }
-    public void increasePoints(int points){ this.points += points; }
+    public void addPoints(int points) { this.points += points;}
 
     public static User getInstance(){
         if(instance == null)
