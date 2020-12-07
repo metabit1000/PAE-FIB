@@ -70,6 +70,13 @@ public class MisReservasInfo {
         this.infoReserva = infoReserva;
     }
 
+    public void addReserva(String dia, String hora, String pers, String interior){
+        this.images.add(R.drawable.bar1);
+        this.bars.add("Bar Casa Pepe");
+        this.adresses.add("Plaça de la Bonanova, 4");
+        this.infoReserva.add(dia+" a las "+hora+"\npara "+pers+" en "+interior);
+    }
+
     public void cancelReserva(int i) {
         this.images.remove(i);
         this.bars.remove(i);

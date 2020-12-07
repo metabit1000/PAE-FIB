@@ -12,6 +12,8 @@
         android:theme="@style/AppTheme.NoActionBar">
         <activity android:name=".ListProductActivity"
             android:screenOrientation="portrait"/>
+        <activity android:name=".ReservarActivity"
+            android:screenOrientation="portrait"/>
         <activity android:name=".MisReservasActivity"
             android:screenOrientation="portrait"/>
         <activity android:name=".RetosActivity"

@@ -57,8 +57,9 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String correu = email.getText().toString();
-                String contra = email.getText().toString();
-                if (correu.equals("user") && contra.equals("user")) openMainActivity();
+                String contra = passw.getText().toString();
+                User usuari = User.getInstance();
+                if (correu.equals(usuari.getEmail()) && contra.equals(usuari.getPassword())) openMainActivity();
                 else Toast.makeText(getApplicationContext(), "Introduzca unas credenciales válidas", Toast.LENGTH_LONG).show();
             }
         });

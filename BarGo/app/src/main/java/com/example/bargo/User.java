@@ -2,8 +2,8 @@ package com.example.bargo;
 
 public class User {
     private String name = "Bar Go";
-    private String password = "VivaLaCerveza123";
-    private String email = "cerveza@gmail.com";
+    private String password = "user";
+    private String email = "user";
     private int points = 3500;
 
     private int codesIntroduced[];
