@@ -11,4 +11,5 @@
     <string name="cancelar">Cancelar</string>
     <string name="obtener">OBTENER</string>
     <string name="noObtener">No tienes suficiente puntos</string>
+    <string name="yaObtenido">Ya obtenido</string>
 </resources>
