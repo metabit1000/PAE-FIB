@@ -22,8 +22,8 @@ public class InfoBarActivity extends AppCompatActivity {
         reservar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Intent intent = new Intent(InfoBar.this, CrearReservaActivity);
-                //startActivity(intent);
+                Intent intent = new Intent(InfoBarActivity.this, ReservarActivity.class);
+                startActivity(intent);
             }
         });
     }
