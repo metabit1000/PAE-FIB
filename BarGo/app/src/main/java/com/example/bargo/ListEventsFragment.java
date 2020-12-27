@@ -1,10 +1,12 @@
 package com.example.bargo;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -62,15 +64,27 @@ public class ListEventsFragment extends Fragment {
         }
 
         @Override
-        public View getView(int position, View covertView, ViewGroup parent) {
+        public View getView(final int position, View covertView, ViewGroup parent) {
             View view = getLayoutInflater().inflate(R.layout.layout_eventslistitem, null);
             ImageView mImageView = view.findViewById(R.id.eventImage);
             TextView mTextView = view.findViewById(R.id.eventName);
             TextView mBarView = view.findViewById(R.id.barName);
+            Button infoButton = view.findViewById(R.id.infoButton);
 
             mImageView.setImageResource(eventsListImage[position]);
             mTextView.setText(eventsListName[position]);
             mBarView.setText(barListName[position]);
+
+            infoButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (position == 1) { //solo evento del clasico
+                        Intent intent = new Intent(getActivity(), InfoEventActivity.class);
+                        startActivity(intent);
+                    }
+                }
+            });
+
             return view;
         }
     }

@@ -22,6 +22,8 @@
             android:screenOrientation="portrait"/>
         <activity android:name=".InfoBarActivity"
             android:screenOrientation="portrait"/>
+        <activity android:name=".InfoEventActivity"
+            android:screenOrientation="portrait"/>
         <activity android:name=".LoginActivity"
             android:screenOrientation="portrait">
             <intent-filter>
