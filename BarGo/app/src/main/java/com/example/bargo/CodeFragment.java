@@ -70,6 +70,7 @@ public class CodeFragment extends Fragment {
         intent.setCameraId(0);
         intent.setBeepEnabled(false);
         intent.setBarcodeImageEnabled(false);
+        intent.setOrientationLocked(true);
         intent.initiateScan();
     }
 
