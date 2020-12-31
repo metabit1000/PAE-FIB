@@ -82,5 +82,6 @@ public class MisReservasInfo {
         this.bars.remove(i);
         this.adresses.remove(i);
         this.infoReserva.remove(i);
+        User.getInstance().addPoints(-1500);
     }
 }
