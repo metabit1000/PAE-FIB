@@ -1,8 +1,13 @@
 package com.example.bargo;
 
+import android.app.Activity;
+import android.content.Context;
+import android.widget.Toast;
+
 import java.util.ArrayList;
 
 public class RetosInfo {
+    private Context context;
     private ArrayList<String> challengeName;
     private ArrayList<Boolean> challengeCompleted;
     private ArrayList<Integer> totalProgress;
@@ -78,6 +83,10 @@ public class RetosInfo {
         this.challengeType.add("PROD");
     }
 
+    public void setContext(Context context) {
+        this.context = context;
+    }
+
     public void changeChallenges(String type){
         for(int i = 0; i < challengeType.size(); i++){
             System.out.println(challengeType.get(i));
@@ -88,6 +97,7 @@ public class RetosInfo {
                     progress.set(i, val);
                     if (val == totalProgress.get(i)) {
                         challengeCompleted.set(i, true);
+                        Toast.makeText(context, "Reto completado!", Toast.LENGTH_SHORT).show();
                         User.getInstance().addPoints(points.get(i));
                     }
                 }
