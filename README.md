@@ -1,6 +1,18 @@
 # PAE-FIB
 
-Repositorio para la asignatura de PAE, FIB
+Repositorio para la asignatura de PAE, FIB. El objetivo de la asignatura era trabajar en un proyecto multidisciplinar partiendo de un reto definido por una empresa, en nuestro caso, la empresa DAMM. 
+
+DAMM nos propusó el siguiente reto: 
+
+**¿Qué podemos hacer para atraer consumidores a los bares, garantizando las medidas sanitarias y de seguridad de la nueva normalidad (COVID-19)?**
+
+Para hacer frente al reto propuesto, hemos creado una aplicación móvil llamada BarGo que permite lo siguiente:
+
+**1.** Canjear códigos de los productos para obtener puntos
+**2.** Obtención de premios mediante puntos
+**3.** Incentivar mediante retos
+**4.** Conocer la ocupación del bar y hacer reservas
+**5.** Información de los eventos de los bares
 
 ## Capturas de la aplicación: 
 
