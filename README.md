@@ -8,11 +8,11 @@ DAMM nos propusó el siguiente reto:
 
 Para hacer frente al reto propuesto, hemos creado una aplicación móvil llamada BarGo que permite lo siguiente:
 
-**1.** Canjear códigos de los productos para obtener puntos
-**2.** Obtención de premios mediante puntos
-**3.** Incentivar mediante retos
-**4.** Conocer la ocupación del bar y hacer reservas
-**5.** Información de los eventos de los bares
+1. Canjear códigos de los productos para obtener puntos
+2. Obtención de premios mediante puntos
+3. Incentivar mediante retos
+4. Conocer la ocupación del bar y hacer reservas
+5. Información de los eventos de los bares
 
 ## Capturas de la aplicación: 
 
