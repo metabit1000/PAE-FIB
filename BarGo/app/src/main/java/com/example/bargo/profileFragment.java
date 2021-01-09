@@ -61,7 +61,9 @@ public class profileFragment extends Fragment {
 
     private void refreshPoints(){
         TextView points = (TextView) view.findViewById(R.id.points);
-        String p = String.valueOf(User.getInstance().getPoints());
+        int pts = User.getInstance().getPoints();
+        if (pts < 0) pts = 0;
+        String p = String.valueOf(pts);
         points.setText(p + " " + getString(R.string.points));
     }
 
