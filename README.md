@@ -10,6 +10,6 @@ Repositorio para la asignatura de PAE, FIB
 ![Image of Captura4](BarGo/images/Captura4.JPG)
 ![Image of Captura5](BarGo/images/Captura5.JPG)
 ![Image of Captura6](BarGo/images/Captura6.JPG)
-![Image of Captura7](BarGo/images/Captura7.JPG)
 ![Image of Captura8](BarGo/images/Captura8.JPG)
+![Image of Captura7](BarGo/images/Captura7.JPG)
 ![Image of Captura9](BarGo/images/Captura9.JPG)
