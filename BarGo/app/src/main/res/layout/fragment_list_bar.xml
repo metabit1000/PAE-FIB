@@ -8,15 +8,55 @@
     tools:context="ListBarFragment"
     android:paddingBottom="60dp">
 
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="395dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="20dp"
+        android:background="#CC383B"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/barsList"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/buscador"
+            android:layout_width="330dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="8dp"
+            android:layout_weight="1"
+            android:textColor="#FFFFFF"
+            android:textSize="45px"
+            android:text="Buscar bar..."/>
+
+        <ImageView
+            android:id="@+id/search"
+            android:layout_width="10dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/search" />
+    </LinearLayout>
+
     <ListView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
         android:id="@+id/barsList"
+        android:layout_width="390dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="60dp"
         android:layout_weight="1"
-        android:paddingTop="10dp"
-        android:dividerHeight="7dp"
         android:backgroundTint="#BFFFFFFF"
-        android:backgroundTintMode="src_over"/>
+        android:backgroundTintMode="src_over"
+        android:dividerHeight="7dp"
+        android:paddingTop="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        tools:ignore="MissingConstraints">
+
+    </ListView>
 
     <TextView
         android:id="@+id/button1"
