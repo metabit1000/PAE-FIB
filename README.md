@@ -2,6 +2,8 @@
 
 Repositorio para la asignatura de PAE, FIB. El objetivo de la asignatura era trabajar en un proyecto multidisciplinar partiendo de un reto definido por una empresa, en nuestro caso, la empresa DAMM. 
 
+Equipo formado por: Anna Llanza, Àlex Aguilera, Arnau Gesa, Paula Gené y Yuanyu Zhou.
+
 DAMM nos propusó el siguiente reto: 
 
 **¿Qué podemos hacer para atraer consumidores a los bares, garantizando las medidas sanitarias y de seguridad de la nueva normalidad (COVID-19)?**
